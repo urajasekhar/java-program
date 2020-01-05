@@ -18,4 +18,14 @@
   <build>
     <finalName>MavenWebProject3</finalName>
   </build>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://18.206.171.178:8081/repository/Nexus-SnapShot/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://18.206.171.178:8081/repository/Nexus-Release/</url>
+    </repository>
+  </distributionManagement>	
 </project>
