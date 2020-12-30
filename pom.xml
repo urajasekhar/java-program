@@ -38,8 +38,6 @@
       </executions>
     </plugin>
   </plugins>
- </build>	  
-  <build>
     <!-- <finalName>MavenWebProject</finalName> -->
     <finalName>${project.artifactId}-${project.version}</finalName>
   </build>
