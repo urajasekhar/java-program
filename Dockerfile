@@ -1,4 +1,3 @@
-FROM openjdk:12-alpine
-COPY target/*.jar /HelloWorld.jar
-EXPOSE 8080
-ENTRYPOINT [ "java" , "-jar" , "/HelloWorld.jar" ] 
+FROM tomcat:8.0.20-jre8
+# Dummy text to test 
+COPY target/*.war /usr/local/tomcat/webapps/myweb.war
