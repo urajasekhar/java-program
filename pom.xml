@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>flipkart</groupId>
-  <artifactId>MavenWebProject</artifactId>
+  <artifactId>JenkinsPipeline</artifactId>
   <packaging>war</packaging>
-  <version>1.0.0-SNAPSHOT</version>
-  <name>MavenWebProject Maven Webapp</name>
+  <version>1.0-SNAPSHOT</version>
+  <name>JenkinsPipeline</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -37,10 +37,20 @@
         </execution>
       </executions>
     </plugin>
+    <plugin> 
+	<!-- Building an executable jar -->
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<version>3.1.0</version>
+	<configuration>
+        <archive>
+	<manifest>
+	<!-- give full qualified name of your main class-->
+       <mainClass>flipkart.App</mainClass>
+       </manifest>
+       </archive>
+     </configuration>
+    </plugin>	    
   </plugins>
- </build>	  
-  <build>
-    <!-- <finalName>MavenWebProject</finalName> -->
-    <finalName>${project.artifactId}-${project.version}</finalName>
-  </build>
+ </build>
 </project>
